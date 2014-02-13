@@ -31,8 +31,9 @@ addpageclass.prototype = {
 		
 			var selectedNode = $('sitetree').firstSelected();
 			if(selectedNode) this.showApplicableChildrenPageTypes(selectedNode.hints);
+
+			$('sitetree').observeMethod('SelectionChanged', this.treeSelectionChanged.bind(this));
 		}
-		$('sitetree').observeMethod('SelectionChanged', this.treeSelectionChanged.bind(this));
 	},
 	
 	onclick : function() {
@@ -47,7 +48,6 @@ addpageclass.prototype = {
 				if( selectedNode.hints && selectedNode.hints.defaultChild )
 					$(_HANDLER_FORMS.addpage).elements.PageType.value = selectedNode.hints.defaultChild;
 			}
-			
 
 			$(_HANDLER_FORMS[this.id]).elements.PageType.onchange = this.typeDropdown_change;
 		}
