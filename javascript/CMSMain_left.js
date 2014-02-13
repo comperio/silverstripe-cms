@@ -47,6 +47,7 @@ addpageclass.prototype = {
 				if( selectedNode.hints && selectedNode.hints.defaultChild )
 					$(_HANDLER_FORMS.addpage).elements.PageType.value = selectedNode.hints.defaultChild;
 			}
+			
 
 			$(_HANDLER_FORMS[this.id]).elements.PageType.onchange = this.typeDropdown_change;
 		}
