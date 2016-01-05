@@ -6,14 +6,15 @@
  * @package cms
  * @subpackage core
  */
-class CMSActionOptionsForm extends Form {
-	function FormAttributes() {
-		return "class=\"actionparams\" style=\"display:none\" " . parent::FormAttributes();
-	}
-	function FormName() {
-		$action = $this->actions->First()->Name();
-		return "{$action}_options";
-	}
+class CMSActionOptionsForm extends Form
+{
+    public function FormAttributes()
+    {
+        return "class=\"actionparams\" style=\"display:none\" " . parent::FormAttributes();
+    }
+    public function FormName()
+    {
+        $action = $this->actions->First()->Name();
+        return "{$action}_options";
+    }
 }
-
-?>

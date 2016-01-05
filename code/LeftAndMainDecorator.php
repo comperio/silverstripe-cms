@@ -5,17 +5,18 @@
  * @package cms
  * @subpackage core
  */
-abstract class LeftAndMainDecorator extends Extension {
+abstract class LeftAndMainDecorator extends Extension
+{
 
-	function init() {
-	}
-	
-	function accessedCMS() {
-	}
-	
-	function augmentNewSiteTreeItem(&$item) {
-	}
-
+    public function init()
+    {
+    }
+    
+    public function accessedCMS()
+    {
+    }
+    
+    public function augmentNewSiteTreeItem(&$item)
+    {
+    }
 }
-
-?>
